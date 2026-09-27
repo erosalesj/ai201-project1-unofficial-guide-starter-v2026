@@ -55,7 +55,7 @@ in at least 4 of 5 tries.
 
 ---
 
-## 4. Something about your chunks
+## 4. Chunks are between 64 to 1024 tokens
 
 <!-- YOU WRITE THIS ONE.
 
@@ -70,14 +70,18 @@ in at least 4 of 5 tries.
           in my corpus turned out to be a heading with no content under it." -->
 
 
+Depending on the scope of the question an answer may lie within a single or multiple documents in the corpus, hence a variable token size between 64 to 1024 tokens may be necessary to capture the relevant answer in the corpus, and output complete answers to a user query.
+
 
 **Why this target:**
 
+A study found chunk size between 64 - 128 tokens were optimal for datasets with short fact based anwers, while chunk sizes between 512 - 1024 tokens were ideal for datasets with long or dispersed answers in the corpus.
 
+Source: https://arxiv.org/html/2505.21700v2#S6
 
 ---
 
-## 5. Your choice
+## 5. 5 out 5 answers consistent and found in corpus
 
 <!-- YOU WRITE THIS ONE TOO.
 
@@ -87,10 +91,11 @@ in at least 4 of 5 tries.
      present — anything, as long as it names a number or an observable
      outcome. -->
 
-
+All 5 questions output an answer found in the corpus, and returns the same answers consistently across 3 different queries
 
 **Why this target:**
 
+Accuracy, as far as generating answers from our corpus source, and consistensy, as far generating the same answer across queries and users, is a necessary condition to create a RAG system that is dependable and useful to the end user.
 
 
 ---
