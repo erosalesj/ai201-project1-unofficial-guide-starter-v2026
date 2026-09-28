@@ -23,11 +23,16 @@ names a target of "4 of 5", and four of three is not a thing.
 
 QUESTIONS = [
     # {"question": "...", "expects": "..."},
-    {"question": "how do you get to Marchwood from the airport", "expects": "Bus that runs every 15 minutes with 20 minute travel time"},
-    {"question": "what does the corpus say about easy walking paths?", "expects": "brightwater river path is a four mile flat walking path; kestrelford trackbed is an old railway line with easy gradient"},
-    {"question": "what does the corpus say about visiting in the fall?", "expects": "In Elder Ness September to October is the bird migration that visitors come for; Brighwater town is at its busiest; the sweet spot in September to vist Halden Bay"},
-    {"question": "what does the corpus say about hospitals in the region?", "expects": "Nearest hospital is in Brighwater"},
-    {"question": "what does the corpus say about food options in Halden Bay", "expects": "Halden Bay's seafood is genuinely fresh because the two harbour restaurants buy directly from boats that land in the early morning"},
+    {"question": "how do you get to Marchwood from the airport", 
+     "expects": "Bus that runs every 15 minutes with 20 minute travel time"},
+    {"question": "what does the corpus say about easy walking paths?", 
+     "expects": "brightwater river path is a four mile flat walking path; kestrelford trackbed is an old railway line with easy gradient"},
+    {"question": "what does the corpus say about visiting in the fall?", 
+     "expects": "In Elder Ness September to October is the bird migration that visitors come for; Brighwater town is at its busiest; the sweet spot in September to vist Halden Bay"},
+    {"question": "what does the corpus say about hospitals in the region?", 
+     "expects": "Nearest hospital is in Brighwater"},
+    {"question": "what does the corpus say about food options in Halden Bay", 
+     "expects": "Halden Bay's seafood is genuinely fresh because the two harbour restaurants buy directly from boats that land in the early morning"},
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.

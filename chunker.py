@@ -103,7 +103,9 @@ def split_documents(documents: list[Document]) -> list[Chunk]:
     for doc in documents:
         pieces = doc.text.split("\n\n")
         for piece in pieces: 
-            if piece:
+            if piece[0] == "#":
+               continue 
+            else:
                 chunks.append(
                     Chunk(
                         text=piece,
