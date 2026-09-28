@@ -27,6 +27,8 @@
 
      Milestone 5. -->
 
+The RAG's corpus are the city_guide, a collection of 11 documents encompassing information that prospective traveller would find useful while visiting the region. The RAG system will answer question such as ways to get around via public transit, dinign options, prospective activities and expected weather by season. The RAG system is tuned such that it will answer only if the query matches a document, and refuse to answer otherwise to avoid hallucinations that would provide the user with inaccurate information.
+
 ## Chunking Strategy
 
 **Chunk size: Paragraph**
@@ -92,11 +94,14 @@ Brightwater goes quiet to the point of dullness with the university empty.
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question:** what does the corpus say about food options in Halden Bay?
 
 **Answer:**
 
 ```
+Halden Bay offers genuinely fresh seafood because its two harbour restaurants buy directly from boats that land in the early morning (*guide_eating.md*, *guide_halden_bay.md*). Prices on the harbour front are roughly double the prices for comparable food on Fell Street, one level up (*guide_eating.md*, *guide_halden_bay.md*).
+
+Sources retrieved: guide_eating.md, guide_halden_bay.md, guide_pellew_sands.md
 ```
 
 **My relevance cutoff:**
@@ -112,7 +117,11 @@ Brightwater goes quiet to the point of dullness with the university empty.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| what does the corpus say about food options in Halden Bay? | Yes | 0.3878 |
+| how do you get to Marchwood from the airport? | Yes | 0.467 |
+| what does the corpus say about easy walking paths?| Yes| 0.6172 |
+| what does the corpus say about visiting in the fall? | Yes | 0.5263 |
+| What is the nearest hospital in Brighwater?| Yes | 0.2117 |
 
 ## How I Used AI
 
@@ -125,9 +134,8 @@ Brightwater goes quiet to the point of dullness with the university empty.
 
      Milestone 5. -->
 
-**1.**
+**1.** I asked claude to explain the functionality of the chunker before implemeting an alternate implementation of the function myself that would chunk based on paragraph boundaries.
 
-**2.**
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
